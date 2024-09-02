@@ -1,0 +1,101 @@
+{
+  "publisher": "satrong",
+  "name": "statusbar-switcher",
+  "displayName": "statusbar-switcher",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "categories": [
+    "Other"
+  ],
+  "description": "Switch any configuration in vscode status bar",
+  "author": "Satrong <satrong@foxmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/satrong/vscode-statusbar-switcher#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satrong/vscode-statusbar-switcher"
+  },
+  "bugs": {
+    "url": "https://github.com/satrong/vscode-statusbar-switcher/issues"
+  },
+  "main": "./dist/extension.cjs",
+  "icon": "res/icon.png",
+  "files": [
+    "LICENSE.md",
+    "dist/*",
+    "res/*"
+  ],
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [],
+    "configuration": {
+      "title": "statusbar-switcher",
+      "properties": {
+        "statusbar-switcher.config": {
+          "type": "array",
+          "description": "配置切换列表",
+          "default": [],
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "显示名称"
+              },
+              "target": {
+                "type": "string",
+                "enum": [
+                  "global",
+                  "workspace"
+                ],
+                "default": "global",
+                "description": "配置作用域，全局或工作区，默认 `global`"
+              },
+              "items": {
+                "type": "array",
+                "description": "配置项列表",
+                "default": [],
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "description": "显示值名称"
+                    },
+                    "config": {
+                      "type": "object",
+                      "description": "需要切换的配置项，key-value 形式，如：`{ 'editor.fontSize': 14 }`"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsup --env.NODE_ENV production --treeshake",
+    "dev": "tsup --watch ./src --env.NODE_ENV development",
+    "typecheck": "tsc --noEmit",
+    "meta": "vscode-ext-gen --output src/generated/meta.ts --scope statusbar-switcher",
+    "vscode:prepublish": "pnpm run build",
+    "pack": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "~18.19.47",
+    "@types/vscode": "^1.92.0",
+    "@vscode/vsce": "^3.0.0",
+    "reactive-vscode": "^0.2.1",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "vscode-ext-gen": "^0.4.2"
+  }
+}
