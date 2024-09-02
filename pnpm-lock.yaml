@@ -9,7 +9,7 @@ devDependencies:
     specifier: ~18.19.47
     version: 18.19.47
   '@types/vscode':
-    specifier: ^1.89.0
+    specifier: ^1.85.0
     version: 1.92.0
   '@vscode/vsce':
     specifier: ^3.0.0
