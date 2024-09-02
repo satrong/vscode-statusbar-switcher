@@ -4,7 +4,7 @@ Switch any configuration in vscode status bar
 
 ## Example
 
-<video controls src="res/example.mp4" title="Example"></video>
+![example](res/example.gif)
 
 ## Commands
 <!-- commands -->
