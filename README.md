@@ -19,20 +19,16 @@ Here is an example of how to use this extension.
           "label": "暗",
           "config": {
             "workbench.colorTheme": "Bearded Theme HC Minuit",
-            "editor.fontFamily": "Input Mono, Monaco,  monospace",
-            "editor.fontSize": 13,
-            "workbench.productIconTheme": "material-product-icons",
-            "workbench.iconTheme": "catppuccin-latte",
+            "editor.fontFamily": "IntelOne Mono",
+            "workbench.sideBar.location": "right",
           }
         },
         {
           "label": "亮",
           "config": {
             "workbench.colorTheme": "Bearded Theme Milkshake Mint",
-            "editor.fontFamily": "JetBrains Mono, Cascadia Code, Monaco,  monospace",
-            "editor.fontSize": 14,
-            "workbench.productIconTheme": "fluent-icons",
-            "workbench.iconTheme": "vscode-icons",
+            "editor.fontFamily": "JetBrains Mono",
+            "workbench.sideBar.location": "left",
           }
         }
       ]
