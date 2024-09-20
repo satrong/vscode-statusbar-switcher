@@ -10,7 +10,7 @@ Here is an example of how to use this extension.
 
 ```json
 {
-    "statusbar-switcher.config": [
+  "statusbar-switcher.config": [
     {
       "title": "主题",
       "target": "global",
@@ -20,7 +20,7 @@ Here is an example of how to use this extension.
           "config": {
             "workbench.colorTheme": "Bearded Theme HC Minuit",
             "editor.fontFamily": "IntelOne Mono",
-            "workbench.sideBar.location": "right",
+            "workbench.sideBar.location": "right"
           }
         },
         {
@@ -28,12 +28,12 @@ Here is an example of how to use this extension.
           "config": {
             "workbench.colorTheme": "Bearded Theme Milkshake Mint",
             "editor.fontFamily": "JetBrains Mono",
-            "workbench.sideBar.location": "left",
+            "workbench.sideBar.location": "left"
           }
         }
       ]
     }
-  }
+  ]
 }
 ```
 
